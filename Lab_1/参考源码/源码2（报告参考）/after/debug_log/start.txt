@@ -1,0 +1,14 @@
+080484ff <start>:
+ 80484ff:	55                   	push   %ebp
+ 8048500:	89 e5                	mov    %esp,%ebp
+ 8048502:	83 ec 08             	sub    $0x8,%esp
+ 8048505:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 8048509:	75 07                	jne    8048512 <start+0x13>
+ 804850b:	e8 8b ff ff ff       	call   804849b <fun1>
+ 8048510:	eb 0b                	jmp    804851d <start+0x1e>
+ 8048512:	83 7d 08 02          	cmpl   $0x2,0x8(%ebp)
+ 8048516:	75 05                	jne    804851d <start+0x1e>
+ 8048518:	e8 b0 ff ff ff       	call   80484cd <fun2>
+ 804851d:	90                   	nop
+ 804851e:	c9                   	leave  
+ 804851f:	c3                   	ret    

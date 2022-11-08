@@ -1,0 +1,15 @@
+08048d6e <schedule>:
+ 8048d6e:	55                   	push   %ebp
+ 8048d6f:	89 e5                	mov    %esp,%ebp
+ 8048d71:	83 ec 18             	sub    $0x18,%esp
+ 8048d74:	e8 cd fd ff ff       	call   8048b46 <pick>
+ 8048d79:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048d7c:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048d80:	74 0e                	je     8048d90 <schedule+0x22>
+ 8048d82:	83 ec 0c             	sub    $0xc,%esp
+ 8048d85:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8048d88:	e8 eb 00 00 00       	call   8048e78 <switch_to>
+ 8048d8d:	83 c4 10             	add    $0x10,%esp
+ 8048d90:	90                   	nop
+ 8048d91:	c9                   	leave  
+ 8048d92:	c3                   	ret    

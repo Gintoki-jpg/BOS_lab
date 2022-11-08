@@ -1,0 +1,5 @@
+好在这次的Lab_2在网上有很多参考，我们可以直接选择参考，这里除了源码以外我还找了一些比较详细的文档帮助理解：
+malloc实现初步了解：https://mp.weixin.qq.com/s/eTD-mzt_m9P_MFDmPj1Kgg
+Linux代码实现（这个代码实现和上面的文档讲解并不是完全对应，但是我们拥有的源码和这个文档是完全对应的）：https://mp.weixin.qq.com/s/iJwPrTwmYHqw5z7J7rj3aA
+
+需要注意的是当参考资料很多的时候不要盲目的找很多来囤积，先一点点的了解然后选择优秀的代码进行实现

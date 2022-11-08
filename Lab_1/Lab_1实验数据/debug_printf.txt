@@ -1,0 +1,133 @@
+thread_1's origin stack[11] is 0
+thread_1's origin stack[10] is 0
+thread_1's origin stack[9] is 0
+thread_1's origin stack[8] is 0
+thread_1's origin stack[7] is 0
+thread_1's origin stack[6] is 0
+thread_1's origin stack[5] is 0
+thread_1's origin stack[4] is 0
+thread_1's origin stack[3] is 134514653
+thread_1's origin stack[2] is 100
+thread_1's origin stack[1] is 134701064
+<=======================>
+Thread_ 1 has been created
+thread_2's origin stack[11] is 0
+thread_2's origin stack[10] is 0
+thread_2's origin stack[9] is 0
+thread_2's origin stack[8] is 0
+thread_2's origin stack[7] is 0
+thread_2's origin stack[6] is 0
+thread_2's origin stack[5] is 0
+thread_2's origin stack[4] is 0
+thread_2's origin stack[3] is 134514653
+thread_2's origin stack[2] is 100
+thread_2's origin stack[1] is 134706224
+<=======================>
+Thread_ 2 has been created
+<====================================>
+<===There is schedule===>
+the next thread is 1,the next esp is 134705144,it's counter is 15
+stack[11] is 0
+stack[10] is 0
+stack[9] is 0
+stack[8] is 0
+stack[7] is 0
+stack[6] is 0
+stack[5] is 0
+stack[4] is 0
+stack[3] is 134514653
+stack[2] is 100
+stack[1] is 134701064
+<=======================>
+thread_ 1 is running----it's status is 0
+<===There is schedule===>
+the next thread is 2,the next esp is 134710304,it's counter is 15
+stack[11] is 0
+stack[10] is 0
+stack[9] is 0
+stack[8] is 0
+stack[7] is 0
+stack[6] is 0
+stack[5] is 0
+stack[4] is 0
+stack[3] is 134514653
+stack[2] is 100
+stack[1] is 134706224
+<=======================>
+thread_ 2 is running----it's status is 0
+<===There is schedule===>
+the next thread is 1,the next esp is 134705020,it's counter is 29
+stack[11] is 0
+stack[10] is 1
+stack[9] is 0
+stack[8] is -474548736
+stack[7] is 134705176
+stack[6] is 134514667
+stack[5] is 0
+stack[4] is 134516475
+stack[3] is 0
+stack[2] is 100
+stack[1] is 134701064
+<=======================>
+thread_ 1 is running----it's status is 0
+<===There is schedule===>
+the next thread is 2,the next esp is 134710180,it's counter is 29
+stack[11] is 0
+stack[10] is 2
+stack[9] is 0
+stack[8] is -474548736
+stack[7] is 134710336
+stack[6] is 134514667
+stack[5] is 0
+stack[4] is 134516475
+stack[3] is 0
+stack[2] is 100
+stack[1] is 134706224
+<=======================>
+thread_ 2 is running----it's status is 0
+<===There is schedule===>
+the next thread is 1,the next esp is 134705020,it's counter is 29
+stack[11] is 0
+stack[10] is 0
+stack[9] is 0
+stack[8] is -474548736
+stack[7] is 134705176
+stack[6] is 134514667
+stack[5] is 0
+stack[4] is 134516475
+stack[3] is 0
+stack[2] is 100
+stack[1] is 134701064
+<=======================>
+Thread_1 excited
+<===There is schedule===>
+the next thread is 2,the next esp is 134710180,it's counter is 29
+stack[11] is 0
+stack[10] is 1
+stack[9] is 0
+stack[8] is -474548736
+stack[7] is 134710336
+stack[6] is 134514667
+stack[5] is 0
+stack[4] is 134516475
+stack[3] is 0
+stack[2] is 100
+stack[1] is 134706224
+<=======================>
+thread_ 2 is running----it's status is 0
+<===There is schedule===>
+the next thread is 2,the next esp is 134710180,it's counter is 29
+stack[11] is 0
+stack[10] is 0
+stack[9] is 0
+stack[8] is -474548736
+stack[7] is 134710336
+stack[6] is 134514667
+stack[5] is 0
+stack[4] is 134516475
+stack[3] is 0
+stack[2] is 100
+stack[1] is 134706224
+<=======================>
+Thread_2 excited
+

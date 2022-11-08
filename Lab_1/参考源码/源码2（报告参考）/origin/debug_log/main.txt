@@ -1,0 +1,1313 @@
+
+main:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+0804846c <_init>:
+ 804846c:	53                   	push   %ebx
+ 804846d:	83 ec 08             	sub    $0x8,%esp
+ 8048470:	e8 4b 01 00 00       	call   80485c0 <__x86.get_pc_thunk.bx>
+ 8048475:	81 c3 8b 2b 00 00    	add    $0x2b8b,%ebx
+ 804847b:	8b 83 fc ff ff ff    	mov    -0x4(%ebx),%eax
+ 8048481:	85 c0                	test   %eax,%eax
+ 8048483:	74 05                	je     804848a <_init+0x1e>
+ 8048485:	e8 f6 00 00 00       	call   8048580 <sigemptyset@plt+0x10>
+ 804848a:	83 c4 08             	add    $0x8,%esp
+ 804848d:	5b                   	pop    %ebx
+ 804848e:	c3                   	ret    
+
+Disassembly of section .plt:
+
+08048490 <setitimer@plt-0x10>:
+ 8048490:	ff 35 04 b0 04 08    	pushl  0x804b004
+ 8048496:	ff 25 08 b0 04 08    	jmp    *0x804b008
+ 804849c:	00 00                	add    %al,(%eax)
+	...
+
+080484a0 <setitimer@plt>:
+ 80484a0:	ff 25 0c b0 04 08    	jmp    *0x804b00c
+ 80484a6:	68 00 00 00 00       	push   $0x0
+ 80484ab:	e9 e0 ff ff ff       	jmp    8048490 <_init+0x24>
+
+080484b0 <printf@plt>:
+ 80484b0:	ff 25 10 b0 04 08    	jmp    *0x804b010
+ 80484b6:	68 08 00 00 00       	push   $0x8
+ 80484bb:	e9 d0 ff ff ff       	jmp    8048490 <_init+0x24>
+
+080484c0 <sigprocmask@plt>:
+ 80484c0:	ff 25 14 b0 04 08    	jmp    *0x804b014
+ 80484c6:	68 10 00 00 00       	push   $0x10
+ 80484cb:	e9 c0 ff ff ff       	jmp    8048490 <_init+0x24>
+
+080484d0 <free@plt>:
+ 80484d0:	ff 25 18 b0 04 08    	jmp    *0x804b018
+ 80484d6:	68 18 00 00 00       	push   $0x18
+ 80484db:	e9 b0 ff ff ff       	jmp    8048490 <_init+0x24>
+
+080484e0 <signal@plt>:
+ 80484e0:	ff 25 1c b0 04 08    	jmp    *0x804b01c
+ 80484e6:	68 20 00 00 00       	push   $0x20
+ 80484eb:	e9 a0 ff ff ff       	jmp    8048490 <_init+0x24>
+
+080484f0 <gettimeofday@plt>:
+ 80484f0:	ff 25 20 b0 04 08    	jmp    *0x804b020
+ 80484f6:	68 28 00 00 00       	push   $0x28
+ 80484fb:	e9 90 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048500 <__stack_chk_fail@plt>:
+ 8048500:	ff 25 24 b0 04 08    	jmp    *0x804b024
+ 8048506:	68 30 00 00 00       	push   $0x30
+ 804850b:	e9 80 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048510 <perror@plt>:
+ 8048510:	ff 25 28 b0 04 08    	jmp    *0x804b028
+ 8048516:	68 38 00 00 00       	push   $0x38
+ 804851b:	e9 70 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048520 <malloc@plt>:
+ 8048520:	ff 25 2c b0 04 08    	jmp    *0x804b02c
+ 8048526:	68 40 00 00 00       	push   $0x40
+ 804852b:	e9 60 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048530 <puts@plt>:
+ 8048530:	ff 25 30 b0 04 08    	jmp    *0x804b030
+ 8048536:	68 48 00 00 00       	push   $0x48
+ 804853b:	e9 50 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048540 <exit@plt>:
+ 8048540:	ff 25 34 b0 04 08    	jmp    *0x804b034
+ 8048546:	68 50 00 00 00       	push   $0x50
+ 804854b:	e9 40 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048550 <__libc_start_main@plt>:
+ 8048550:	ff 25 38 b0 04 08    	jmp    *0x804b038
+ 8048556:	68 58 00 00 00       	push   $0x58
+ 804855b:	e9 30 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048560 <sigaddset@plt>:
+ 8048560:	ff 25 3c b0 04 08    	jmp    *0x804b03c
+ 8048566:	68 60 00 00 00       	push   $0x60
+ 804856b:	e9 20 ff ff ff       	jmp    8048490 <_init+0x24>
+
+08048570 <sigemptyset@plt>:
+ 8048570:	ff 25 40 b0 04 08    	jmp    *0x804b040
+ 8048576:	68 68 00 00 00       	push   $0x68
+ 804857b:	e9 10 ff ff ff       	jmp    8048490 <_init+0x24>
+
+Disassembly of section .plt.got:
+
+08048580 <.plt.got>:
+ 8048580:	ff 25 fc af 04 08    	jmp    *0x804affc
+ 8048586:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+08048590 <_start>:
+ 8048590:	31 ed                	xor    %ebp,%ebp
+ 8048592:	5e                   	pop    %esi
+ 8048593:	89 e1                	mov    %esp,%ecx
+ 8048595:	83 e4 f0             	and    $0xfffffff0,%esp
+ 8048598:	50                   	push   %eax
+ 8048599:	54                   	push   %esp
+ 804859a:	52                   	push   %edx
+ 804859b:	68 10 8f 04 08       	push   $0x8048f10
+ 80485a0:	68 b0 8e 04 08       	push   $0x8048eb0
+ 80485a5:	51                   	push   %ecx
+ 80485a6:	56                   	push   %esi
+ 80485a7:	68 9a 87 04 08       	push   $0x804879a
+ 80485ac:	e8 9f ff ff ff       	call   8048550 <__libc_start_main@plt>
+ 80485b1:	f4                   	hlt    
+ 80485b2:	66 90                	xchg   %ax,%ax
+ 80485b4:	66 90                	xchg   %ax,%ax
+ 80485b6:	66 90                	xchg   %ax,%ax
+ 80485b8:	66 90                	xchg   %ax,%ax
+ 80485ba:	66 90                	xchg   %ax,%ax
+ 80485bc:	66 90                	xchg   %ax,%ax
+ 80485be:	66 90                	xchg   %ax,%ax
+
+080485c0 <__x86.get_pc_thunk.bx>:
+ 80485c0:	8b 1c 24             	mov    (%esp),%ebx
+ 80485c3:	c3                   	ret    
+ 80485c4:	66 90                	xchg   %ax,%ax
+ 80485c6:	66 90                	xchg   %ax,%ax
+ 80485c8:	66 90                	xchg   %ax,%ax
+ 80485ca:	66 90                	xchg   %ax,%ax
+ 80485cc:	66 90                	xchg   %ax,%ax
+ 80485ce:	66 90                	xchg   %ax,%ax
+
+080485d0 <deregister_tm_clones>:
+ 80485d0:	b8 e3 c0 04 08       	mov    $0x804c0e3,%eax
+ 80485d5:	2d e0 c0 04 08       	sub    $0x804c0e0,%eax
+ 80485da:	83 f8 06             	cmp    $0x6,%eax
+ 80485dd:	76 1a                	jbe    80485f9 <deregister_tm_clones+0x29>
+ 80485df:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80485e4:	85 c0                	test   %eax,%eax
+ 80485e6:	74 11                	je     80485f9 <deregister_tm_clones+0x29>
+ 80485e8:	55                   	push   %ebp
+ 80485e9:	89 e5                	mov    %esp,%ebp
+ 80485eb:	83 ec 14             	sub    $0x14,%esp
+ 80485ee:	68 e0 c0 04 08       	push   $0x804c0e0
+ 80485f3:	ff d0                	call   *%eax
+ 80485f5:	83 c4 10             	add    $0x10,%esp
+ 80485f8:	c9                   	leave  
+ 80485f9:	f3 c3                	repz ret 
+ 80485fb:	90                   	nop
+ 80485fc:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+08048600 <register_tm_clones>:
+ 8048600:	b8 e0 c0 04 08       	mov    $0x804c0e0,%eax
+ 8048605:	2d e0 c0 04 08       	sub    $0x804c0e0,%eax
+ 804860a:	c1 f8 02             	sar    $0x2,%eax
+ 804860d:	89 c2                	mov    %eax,%edx
+ 804860f:	c1 ea 1f             	shr    $0x1f,%edx
+ 8048612:	01 d0                	add    %edx,%eax
+ 8048614:	d1 f8                	sar    %eax
+ 8048616:	74 1b                	je     8048633 <register_tm_clones+0x33>
+ 8048618:	ba 00 00 00 00       	mov    $0x0,%edx
+ 804861d:	85 d2                	test   %edx,%edx
+ 804861f:	74 12                	je     8048633 <register_tm_clones+0x33>
+ 8048621:	55                   	push   %ebp
+ 8048622:	89 e5                	mov    %esp,%ebp
+ 8048624:	83 ec 10             	sub    $0x10,%esp
+ 8048627:	50                   	push   %eax
+ 8048628:	68 e0 c0 04 08       	push   $0x804c0e0
+ 804862d:	ff d2                	call   *%edx
+ 804862f:	83 c4 10             	add    $0x10,%esp
+ 8048632:	c9                   	leave  
+ 8048633:	f3 c3                	repz ret 
+ 8048635:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 8048639:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+08048640 <__do_global_dtors_aux>:
+ 8048640:	80 3d e0 c0 04 08 00 	cmpb   $0x0,0x804c0e0
+ 8048647:	75 13                	jne    804865c <__do_global_dtors_aux+0x1c>
+ 8048649:	55                   	push   %ebp
+ 804864a:	89 e5                	mov    %esp,%ebp
+ 804864c:	83 ec 08             	sub    $0x8,%esp
+ 804864f:	e8 7c ff ff ff       	call   80485d0 <deregister_tm_clones>
+ 8048654:	c6 05 e0 c0 04 08 01 	movb   $0x1,0x804c0e0
+ 804865b:	c9                   	leave  
+ 804865c:	f3 c3                	repz ret 
+ 804865e:	66 90                	xchg   %ax,%ax
+
+08048660 <frame_dummy>:
+ 8048660:	b8 10 af 04 08       	mov    $0x804af10,%eax
+ 8048665:	8b 10                	mov    (%eax),%edx
+ 8048667:	85 d2                	test   %edx,%edx
+ 8048669:	75 05                	jne    8048670 <frame_dummy+0x10>
+ 804866b:	eb 93                	jmp    8048600 <register_tm_clones>
+ 804866d:	8d 76 00             	lea    0x0(%esi),%esi
+ 8048670:	ba 00 00 00 00       	mov    $0x0,%edx
+ 8048675:	85 d2                	test   %edx,%edx
+ 8048677:	74 f2                	je     804866b <frame_dummy+0xb>
+ 8048679:	55                   	push   %ebp
+ 804867a:	89 e5                	mov    %esp,%ebp
+ 804867c:	83 ec 14             	sub    $0x14,%esp
+ 804867f:	50                   	push   %eax
+ 8048680:	ff d2                	call   *%edx
+ 8048682:	83 c4 10             	add    $0x10,%esp
+ 8048685:	c9                   	leave  
+ 8048686:	e9 75 ff ff ff       	jmp    8048600 <register_tm_clones>
+
+0804868b <fun1>:
+#include<stdio.h>
+#include<stdlib.h>
+#include"thread.h"
+
+void fun1() {
+ 804868b:	55                   	push   %ebp
+ 804868c:	89 e5                	mov    %esp,%ebp
+ 804868e:	83 ec 18             	sub    $0x18,%esp
+	int i = 10;
+ 8048691:	c7 45 f4 0a 00 00 00 	movl   $0xa,-0xc(%ebp)
+	while(i--) {
+ 8048698:	eb 1d                	jmp    80486b7 <fun1+0x2c>
+		printf("hello,I'm fun1\n");
+ 804869a:	83 ec 0c             	sub    $0xc,%esp
+ 804869d:	68 30 8f 04 08       	push   $0x8048f30
+ 80486a2:	e8 89 fe ff ff       	call   8048530 <puts@plt>
+ 80486a7:	83 c4 10             	add    $0x10,%esp
+		mysleep(2);
+ 80486aa:	83 ec 0c             	sub    $0xc,%esp
+ 80486ad:	6a 02                	push   $0x2
+ 80486af:	e8 df 06 00 00       	call   8048d93 <mysleep>
+ 80486b4:	83 c4 10             	add    $0x10,%esp
+#include<stdlib.h>
+#include"thread.h"
+
+void fun1() {
+	int i = 10;
+	while(i--) {
+ 80486b7:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80486ba:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 80486bd:	89 55 f4             	mov    %edx,-0xc(%ebp)
+ 80486c0:	85 c0                	test   %eax,%eax
+ 80486c2:	75 d6                	jne    804869a <fun1+0xf>
+		printf("hello,I'm fun1\n");
+		mysleep(2);
+	}
+}
+ 80486c4:	90                   	nop
+ 80486c5:	c9                   	leave  
+ 80486c6:	c3                   	ret    
+
+080486c7 <fun2>:
+
+void fun2() {
+ 80486c7:	55                   	push   %ebp
+ 80486c8:	89 e5                	mov    %esp,%ebp
+ 80486ca:	83 ec 18             	sub    $0x18,%esp
+	int i = 10;
+ 80486cd:	c7 45 f4 0a 00 00 00 	movl   $0xa,-0xc(%ebp)
+	while(i--) {
+ 80486d4:	eb 1d                	jmp    80486f3 <fun2+0x2c>
+		printf("hello,I'm fun2\n");
+ 80486d6:	83 ec 0c             	sub    $0xc,%esp
+ 80486d9:	68 3f 8f 04 08       	push   $0x8048f3f
+ 80486de:	e8 4d fe ff ff       	call   8048530 <puts@plt>
+ 80486e3:	83 c4 10             	add    $0x10,%esp
+		mysleep(1);
+ 80486e6:	83 ec 0c             	sub    $0xc,%esp
+ 80486e9:	6a 01                	push   $0x1
+ 80486eb:	e8 a3 06 00 00       	call   8048d93 <mysleep>
+ 80486f0:	83 c4 10             	add    $0x10,%esp
+	}
+}
+
+void fun2() {
+	int i = 10;
+	while(i--) {
+ 80486f3:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80486f6:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 80486f9:	89 55 f4             	mov    %edx,-0xc(%ebp)
+ 80486fc:	85 c0                	test   %eax,%eax
+ 80486fe:	75 d6                	jne    80486d6 <fun2+0xf>
+		printf("hello,I'm fun2\n");
+		mysleep(1);
+	}
+}
+ 8048700:	90                   	nop
+ 8048701:	c9                   	leave  
+ 8048702:	c3                   	ret    
+
+08048703 <fun3>:
+
+void fun3() {
+ 8048703:	55                   	push   %ebp
+ 8048704:	89 e5                	mov    %esp,%ebp
+ 8048706:	83 ec 18             	sub    $0x18,%esp
+	int i = 2;
+ 8048709:	c7 45 f4 02 00 00 00 	movl   $0x2,-0xc(%ebp)
+	while(i--) {
+ 8048710:	eb 1d                	jmp    804872f <fun3+0x2c>
+		printf("hello,I'm fun3\n");
+ 8048712:	83 ec 0c             	sub    $0xc,%esp
+ 8048715:	68 4e 8f 04 08       	push   $0x8048f4e
+ 804871a:	e8 11 fe ff ff       	call   8048530 <puts@plt>
+ 804871f:	83 c4 10             	add    $0x10,%esp
+		mysleep(1);
+ 8048722:	83 ec 0c             	sub    $0xc,%esp
+ 8048725:	6a 01                	push   $0x1
+ 8048727:	e8 67 06 00 00       	call   8048d93 <mysleep>
+ 804872c:	83 c4 10             	add    $0x10,%esp
+	}
+}
+
+void fun3() {
+	int i = 2;
+	while(i--) {
+ 804872f:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048732:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 8048735:	89 55 f4             	mov    %edx,-0xc(%ebp)
+ 8048738:	85 c0                	test   %eax,%eax
+ 804873a:	75 d6                	jne    8048712 <fun3+0xf>
+		printf("hello,I'm fun3\n");
+		mysleep(1);
+	}
+}
+ 804873c:	90                   	nop
+ 804873d:	c9                   	leave  
+ 804873e:	c3                   	ret    
+
+0804873f <fun4>:
+
+void fun4() {
+ 804873f:	55                   	push   %ebp
+ 8048740:	89 e5                	mov    %esp,%ebp
+ 8048742:	83 ec 18             	sub    $0x18,%esp
+	int i = 15;
+ 8048745:	c7 45 ec 0f 00 00 00 	movl   $0xf,-0x14(%ebp)
+	int m,n;
+	while(i--) {
+ 804874c:	eb 3c                	jmp    804878a <fun4+0x4b>
+		printf("hello,I'm fun4\n");
+ 804874e:	83 ec 0c             	sub    $0xc,%esp
+ 8048751:	68 5d 8f 04 08       	push   $0x8048f5d
+ 8048756:	e8 d5 fd ff ff       	call   8048530 <puts@plt>
+ 804875b:	83 c4 10             	add    $0x10,%esp
+		for(m = 0; m < 10000; m++) 
+ 804875e:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%ebp)
+ 8048765:	eb 1a                	jmp    8048781 <fun4+0x42>
+		  for(n = 0; n < 10000; n++);
+ 8048767:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 804876e:	eb 04                	jmp    8048774 <fun4+0x35>
+ 8048770:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 8048774:	81 7d f4 0f 27 00 00 	cmpl   $0x270f,-0xc(%ebp)
+ 804877b:	7e f3                	jle    8048770 <fun4+0x31>
+void fun4() {
+	int i = 15;
+	int m,n;
+	while(i--) {
+		printf("hello,I'm fun4\n");
+		for(m = 0; m < 10000; m++) 
+ 804877d:	83 45 f0 01          	addl   $0x1,-0x10(%ebp)
+ 8048781:	81 7d f0 0f 27 00 00 	cmpl   $0x270f,-0x10(%ebp)
+ 8048788:	7e dd                	jle    8048767 <fun4+0x28>
+}
+
+void fun4() {
+	int i = 15;
+	int m,n;
+	while(i--) {
+ 804878a:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 804878d:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 8048790:	89 55 ec             	mov    %edx,-0x14(%ebp)
+ 8048793:	85 c0                	test   %eax,%eax
+ 8048795:	75 b7                	jne    804874e <fun4+0xf>
+		printf("hello,I'm fun4\n");
+		for(m = 0; m < 10000; m++) 
+		  for(n = 0; n < 10000; n++);
+	}
+}
+ 8048797:	90                   	nop
+ 8048798:	c9                   	leave  
+ 8048799:	c3                   	ret    
+
+0804879a <main>:
+
+int main()
+{
+ 804879a:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+ 804879e:	83 e4 f0             	and    $0xfffffff0,%esp
+ 80487a1:	ff 71 fc             	pushl  -0x4(%ecx)
+ 80487a4:	55                   	push   %ebp
+ 80487a5:	89 e5                	mov    %esp,%ebp
+ 80487a7:	51                   	push   %ecx
+ 80487a8:	83 ec 24             	sub    $0x24,%esp
+ 80487ab:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 80487b1:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 80487b4:	31 c0                	xor    %eax,%eax
+	int tid1,tid2,tid3,tid4;
+	thread_create(&tid1,fun1);
+ 80487b6:	83 ec 08             	sub    $0x8,%esp
+ 80487b9:	68 8b 86 04 08       	push   $0x804868b
+ 80487be:	8d 45 e0             	lea    -0x20(%ebp),%eax
+ 80487c1:	50                   	push   %eax
+ 80487c2:	e8 68 01 00 00       	call   804892f <thread_create>
+ 80487c7:	83 c4 10             	add    $0x10,%esp
+	printf("create thread %d\n",tid1);
+ 80487ca:	8b 45 e0             	mov    -0x20(%ebp),%eax
+ 80487cd:	83 ec 08             	sub    $0x8,%esp
+ 80487d0:	50                   	push   %eax
+ 80487d1:	68 6c 8f 04 08       	push   $0x8048f6c
+ 80487d6:	e8 d5 fc ff ff       	call   80484b0 <printf@plt>
+ 80487db:	83 c4 10             	add    $0x10,%esp
+	thread_create(&tid2,fun2);
+ 80487de:	83 ec 08             	sub    $0x8,%esp
+ 80487e1:	68 c7 86 04 08       	push   $0x80486c7
+ 80487e6:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+ 80487e9:	50                   	push   %eax
+ 80487ea:	e8 40 01 00 00       	call   804892f <thread_create>
+ 80487ef:	83 c4 10             	add    $0x10,%esp
+	printf("create thread %d\n",tid2);
+ 80487f2:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+ 80487f5:	83 ec 08             	sub    $0x8,%esp
+ 80487f8:	50                   	push   %eax
+ 80487f9:	68 6c 8f 04 08       	push   $0x8048f6c
+ 80487fe:	e8 ad fc ff ff       	call   80484b0 <printf@plt>
+ 8048803:	83 c4 10             	add    $0x10,%esp
+	thread_create(&tid3,fun3);
+ 8048806:	83 ec 08             	sub    $0x8,%esp
+ 8048809:	68 03 87 04 08       	push   $0x8048703
+ 804880e:	8d 45 e8             	lea    -0x18(%ebp),%eax
+ 8048811:	50                   	push   %eax
+ 8048812:	e8 18 01 00 00       	call   804892f <thread_create>
+ 8048817:	83 c4 10             	add    $0x10,%esp
+	printf("create thread %d\n",tid3);
+ 804881a:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 804881d:	83 ec 08             	sub    $0x8,%esp
+ 8048820:	50                   	push   %eax
+ 8048821:	68 6c 8f 04 08       	push   $0x8048f6c
+ 8048826:	e8 85 fc ff ff       	call   80484b0 <printf@plt>
+ 804882b:	83 c4 10             	add    $0x10,%esp
+	thread_create(&tid4,fun4);
+ 804882e:	83 ec 08             	sub    $0x8,%esp
+ 8048831:	68 3f 87 04 08       	push   $0x804873f
+ 8048836:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 8048839:	50                   	push   %eax
+ 804883a:	e8 f0 00 00 00       	call   804892f <thread_create>
+ 804883f:	83 c4 10             	add    $0x10,%esp
+	printf("create thread %d\n",tid4);
+ 8048842:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048845:	83 ec 08             	sub    $0x8,%esp
+ 8048848:	50                   	push   %eax
+ 8048849:	68 6c 8f 04 08       	push   $0x8048f6c
+ 804884e:	e8 5d fc ff ff       	call   80484b0 <printf@plt>
+ 8048853:	83 c4 10             	add    $0x10,%esp
+	
+	int i = 2;
+ 8048856:	c7 45 f0 02 00 00 00 	movl   $0x2,-0x10(%ebp)
+	while(i--) {
+ 804885d:	eb 1d                	jmp    804887c <main+0xe2>
+		printf("hello,I'm main\n");
+ 804885f:	83 ec 0c             	sub    $0xc,%esp
+ 8048862:	68 7e 8f 04 08       	push   $0x8048f7e
+ 8048867:	e8 c4 fc ff ff       	call   8048530 <puts@plt>
+ 804886c:	83 c4 10             	add    $0x10,%esp
+		mysleep(3);
+ 804886f:	83 ec 0c             	sub    $0xc,%esp
+ 8048872:	6a 03                	push   $0x3
+ 8048874:	e8 1a 05 00 00       	call   8048d93 <mysleep>
+ 8048879:	83 c4 10             	add    $0x10,%esp
+	printf("create thread %d\n",tid3);
+	thread_create(&tid4,fun4);
+	printf("create thread %d\n",tid4);
+	
+	int i = 2;
+	while(i--) {
+ 804887c:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804887f:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 8048882:	89 55 f0             	mov    %edx,-0x10(%ebp)
+ 8048885:	85 c0                	test   %eax,%eax
+ 8048887:	75 d6                	jne    804885f <main+0xc5>
+		printf("hello,I'm main\n");
+		mysleep(3);
+	}
+	thread_join(tid1);
+ 8048889:	8b 45 e0             	mov    -0x20(%ebp),%eax
+ 804888c:	83 ec 0c             	sub    $0xc,%esp
+ 804888f:	50                   	push   %eax
+ 8048890:	e8 f1 01 00 00       	call   8048a86 <thread_join>
+ 8048895:	83 c4 10             	add    $0x10,%esp
+	thread_join(tid2);
+ 8048898:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+ 804889b:	83 ec 0c             	sub    $0xc,%esp
+ 804889e:	50                   	push   %eax
+ 804889f:	e8 e2 01 00 00       	call   8048a86 <thread_join>
+ 80488a4:	83 c4 10             	add    $0x10,%esp
+	thread_join(tid3);
+ 80488a7:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 80488aa:	83 ec 0c             	sub    $0xc,%esp
+ 80488ad:	50                   	push   %eax
+ 80488ae:	e8 d3 01 00 00       	call   8048a86 <thread_join>
+ 80488b3:	83 c4 10             	add    $0x10,%esp
+	thread_join(tid4);
+ 80488b6:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 80488b9:	83 ec 0c             	sub    $0xc,%esp
+ 80488bc:	50                   	push   %eax
+ 80488bd:	e8 c4 01 00 00       	call   8048a86 <thread_join>
+ 80488c2:	83 c4 10             	add    $0x10,%esp
+	
+	return 0;
+ 80488c5:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80488ca:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+ 80488cd:	65 33 0d 14 00 00 00 	xor    %gs:0x14,%ecx
+ 80488d4:	74 05                	je     80488db <main+0x141>
+ 80488d6:	e8 25 fc ff ff       	call   8048500 <__stack_chk_fail@plt>
+ 80488db:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+ 80488de:	c9                   	leave  
+ 80488df:	8d 61 fc             	lea    -0x4(%ecx),%esp
+ 80488e2:	c3                   	ret    
+
+080488e3 <start>:
+
+void schedule();
+static struct task_struct init_task = {0,NULL,THREAD_RUNNING,0,0,15,15,{0}};
+struct task_struct *current = &init_task;
+struct task_struct *task[NR_TASKS] = {&init_task};
+void start(struct task_struct *tsk) {
+ 80488e3:	55                   	push   %ebp
+ 80488e4:	89 e5                	mov    %esp,%ebp
+ 80488e6:	83 ec 08             	sub    $0x8,%esp
+	tsk->th_fn();
+ 80488e9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488ec:	8b 40 04             	mov    0x4(%eax),%eax
+ 80488ef:	ff d0                	call   *%eax
+	tsk->status = THREAD_EXIT;
+ 80488f1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488f4:	c7 40 10 03 00 00 00 	movl   $0x3,0x10(%eax)
+	printf("thread[%d] exited\n",tsk->id);
+ 80488fb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488fe:	8b 00                	mov    (%eax),%eax
+ 8048900:	83 ec 08             	sub    $0x8,%esp
+ 8048903:	50                   	push   %eax
+ 8048904:	68 8d 8f 04 08       	push   $0x8048f8d
+ 8048909:	e8 a2 fb ff ff       	call   80484b0 <printf@plt>
+ 804890e:	83 c4 10             	add    $0x10,%esp
+	schedule();
+ 8048911:	e8 58 04 00 00       	call   8048d6e <schedule>
+	printf("thread [%d] resume\n",tsk->id);
+ 8048916:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048919:	8b 00                	mov    (%eax),%eax
+ 804891b:	83 ec 08             	sub    $0x8,%esp
+ 804891e:	50                   	push   %eax
+ 804891f:	68 a0 8f 04 08       	push   $0x8048fa0
+ 8048924:	e8 87 fb ff ff       	call   80484b0 <printf@plt>
+ 8048929:	83 c4 10             	add    $0x10,%esp
+}
+ 804892c:	90                   	nop
+ 804892d:	c9                   	leave  
+ 804892e:	c3                   	ret    
+
+0804892f <thread_create>:
+
+int thread_create(int *tid,void (*start_routine)()) {
+ 804892f:	55                   	push   %ebp
+ 8048930:	89 e5                	mov    %esp,%ebp
+ 8048932:	83 ec 18             	sub    $0x18,%esp
+	int id = -1;
+ 8048935:	c7 45 ec ff ff ff ff 	movl   $0xffffffff,-0x14(%ebp)
+	struct task_struct *tsk = 
+ 804893c:	83 ec 0c             	sub    $0xc,%esp
+ 804893f:	68 1c 10 00 00       	push   $0x101c
+ 8048944:	e8 d7 fb ff ff       	call   8048520 <malloc@plt>
+ 8048949:	83 c4 10             	add    $0x10,%esp
+ 804894c:	89 45 f0             	mov    %eax,-0x10(%ebp)
+		(struct task_struct*)malloc(sizeof(struct task_struct));
+	
+	//find an empty position
+	while(++id < NR_TASKS && task[id]);
+ 804894f:	83 45 ec 01          	addl   $0x1,-0x14(%ebp)
+ 8048953:	83 7d ec 0f          	cmpl   $0xf,-0x14(%ebp)
+ 8048957:	7f 0e                	jg     8048967 <thread_create+0x38>
+ 8048959:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 804895c:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048963:	85 c0                	test   %eax,%eax
+ 8048965:	75 e8                	jne    804894f <thread_create+0x20>
+	
+	//cannot find it
+	if(id == NR_TASKS) return -1;
+ 8048967:	83 7d ec 10          	cmpl   $0x10,-0x14(%ebp)
+ 804896b:	75 0a                	jne    8048977 <thread_create+0x48>
+ 804896d:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 8048972:	e9 0d 01 00 00       	jmp    8048a84 <thread_create+0x155>
+
+	//put it in the empty position
+	task[id] = tsk;
+ 8048977:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 804897a:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 804897d:	89 14 85 a0 c0 04 08 	mov    %edx,0x804c0a0(,%eax,4)
+
+	//set tid
+	if(tid) *tid = id;
+ 8048984:	83 7d 08 00          	cmpl   $0x0,0x8(%ebp)
+ 8048988:	74 08                	je     8048992 <thread_create+0x63>
+ 804898a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804898d:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 8048990:	89 10                	mov    %edx,(%eax)
+
+	//init thread
+	tsk->id = id;
+ 8048992:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8048995:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 8048998:	89 10                	mov    %edx,(%eax)
+	tsk->th_fn = start_routine;
+ 804899a:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804899d:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 80489a0:	89 50 04             	mov    %edx,0x4(%eax)
+	int *stack = tsk->stack;
+ 80489a3:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489a6:	83 c0 1c             	add    $0x1c,%eax
+ 80489a9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	tsk->esp = (int)(stack + STACK_SIZE - 11);
+ 80489ac:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80489af:	05 d4 0f 00 00       	add    $0xfd4,%eax
+ 80489b4:	89 c2                	mov    %eax,%edx
+ 80489b6:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489b9:	89 50 08             	mov    %edx,0x8(%eax)
+	tsk->wakeuptime = 0;
+ 80489bc:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489bf:	c7 40 0c 00 00 00 00 	movl   $0x0,0xc(%eax)
+	tsk->status = THREAD_RUNNING;
+ 80489c6:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489c9:	c7 40 10 01 00 00 00 	movl   $0x1,0x10(%eax)
+	tsk->counter = 15;
+ 80489d0:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489d3:	c7 40 14 0f 00 00 00 	movl   $0xf,0x14(%eax)
+	tsk->priority = 15;
+ 80489da:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 80489dd:	c7 40 18 0f 00 00 00 	movl   $0xf,0x18(%eax)
+	//init func stack frame
+	stack[STACK_SIZE - 11] = 7;
+ 80489e4:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80489e7:	05 d4 0f 00 00       	add    $0xfd4,%eax
+ 80489ec:	c7 00 07 00 00 00    	movl   $0x7,(%eax)
+	stack[STACK_SIZE - 10] = 6;
+ 80489f2:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80489f5:	05 d8 0f 00 00       	add    $0xfd8,%eax
+ 80489fa:	c7 00 06 00 00 00    	movl   $0x6,(%eax)
+	stack[STACK_SIZE - 9] = 5;
+ 8048a00:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a03:	05 dc 0f 00 00       	add    $0xfdc,%eax
+ 8048a08:	c7 00 05 00 00 00    	movl   $0x5,(%eax)
+	stack[STACK_SIZE - 8] = 4;
+ 8048a0e:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a11:	05 e0 0f 00 00       	add    $0xfe0,%eax
+ 8048a16:	c7 00 04 00 00 00    	movl   $0x4,(%eax)
+	stack[STACK_SIZE - 7] = 3;
+ 8048a1c:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a1f:	05 e4 0f 00 00       	add    $0xfe4,%eax
+ 8048a24:	c7 00 03 00 00 00    	movl   $0x3,(%eax)
+	stack[STACK_SIZE - 6] = 2;
+ 8048a2a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a2d:	05 e8 0f 00 00       	add    $0xfe8,%eax
+ 8048a32:	c7 00 02 00 00 00    	movl   $0x2,(%eax)
+	stack[STACK_SIZE - 5] = 1;
+ 8048a38:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a3b:	05 ec 0f 00 00       	add    $0xfec,%eax
+ 8048a40:	c7 00 01 00 00 00    	movl   $0x1,(%eax)
+	stack[STACK_SIZE - 4] = 0;
+ 8048a46:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a49:	05 f0 0f 00 00       	add    $0xff0,%eax
+ 8048a4e:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+	stack[STACK_SIZE - 3] = (int)start;
+ 8048a54:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a57:	05 f4 0f 00 00       	add    $0xff4,%eax
+ 8048a5c:	ba e3 88 04 08       	mov    $0x80488e3,%edx
+ 8048a61:	89 10                	mov    %edx,(%eax)
+	stack[STACK_SIZE - 2] = 100;
+ 8048a63:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a66:	05 f8 0f 00 00       	add    $0xff8,%eax
+ 8048a6b:	c7 00 64 00 00 00    	movl   $0x64,(%eax)
+	stack[STACK_SIZE - 1] = (int)tsk;
+ 8048a71:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048a74:	8d 90 fc 0f 00 00    	lea    0xffc(%eax),%edx
+ 8048a7a:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8048a7d:	89 02                	mov    %eax,(%edx)
+
+	return 0;
+ 8048a7f:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8048a84:	c9                   	leave  
+ 8048a85:	c3                   	ret    
+
+08048a86 <thread_join>:
+
+int thread_join(int tid) {
+ 8048a86:	55                   	push   %ebp
+ 8048a87:	89 e5                	mov    %esp,%ebp
+ 8048a89:	83 ec 08             	sub    $0x8,%esp
+	while(task[tid]->status != THREAD_EXIT) {
+ 8048a8c:	eb 05                	jmp    8048a93 <thread_join+0xd>
+		schedule();
+ 8048a8e:	e8 db 02 00 00       	call   8048d6e <schedule>
+
+	return 0;
+}
+
+int thread_join(int tid) {
+	while(task[tid]->status != THREAD_EXIT) {
+ 8048a93:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048a96:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048a9d:	8b 40 10             	mov    0x10(%eax),%eax
+ 8048aa0:	83 f8 03             	cmp    $0x3,%eax
+ 8048aa3:	75 e9                	jne    8048a8e <thread_join+0x8>
+		schedule();
+	}
+	free(task[tid]);
+ 8048aa5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048aa8:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048aaf:	83 ec 0c             	sub    $0xc,%esp
+ 8048ab2:	50                   	push   %eax
+ 8048ab3:	e8 18 fa ff ff       	call   80484d0 <free@plt>
+ 8048ab8:	83 c4 10             	add    $0x10,%esp
+	task[tid] = NULL;
+ 8048abb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048abe:	c7 04 85 a0 c0 04 08 	movl   $0x0,0x804c0a0(,%eax,4)
+ 8048ac5:	00 00 00 00 
+
+}
+ 8048ac9:	90                   	nop
+ 8048aca:	c9                   	leave  
+ 8048acb:	c3                   	ret    
+
+08048acc <getmstime>:
+
+static struct task_struct *pick();
+void switch_to(struct task_struct *next);
+void schedule();
+void mysleep(int seconds);
+static unsigned int getmstime() {
+ 8048acc:	55                   	push   %ebp
+ 8048acd:	89 e5                	mov    %esp,%ebp
+ 8048acf:	53                   	push   %ebx
+ 8048ad0:	83 ec 14             	sub    $0x14,%esp
+ 8048ad3:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 8048ad9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048adc:	31 c0                	xor    %eax,%eax
+		struct timeval {
+			long int tv_sec;// s
+			long int tv_usec;// ms
+		}
+	*/
+	if(gettimeofday(&tv,NULL) < 0) {//get the time begin in 1970-01-01 00:00:00
+ 8048ade:	83 ec 08             	sub    $0x8,%esp
+ 8048ae1:	6a 00                	push   $0x0
+ 8048ae3:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 8048ae6:	50                   	push   %eax
+ 8048ae7:	e8 04 fa ff ff       	call   80484f0 <gettimeofday@plt>
+ 8048aec:	83 c4 10             	add    $0x10,%esp
+ 8048aef:	85 c0                	test   %eax,%eax
+ 8048af1:	79 1a                	jns    8048b0d <getmstime+0x41>
+		perror("gettimeofday");
+ 8048af3:	83 ec 0c             	sub    $0xc,%esp
+ 8048af6:	68 b4 8f 04 08       	push   $0x8048fb4
+ 8048afb:	e8 10 fa ff ff       	call   8048510 <perror@plt>
+ 8048b00:	83 c4 10             	add    $0x10,%esp
+		exit(-1);
+ 8048b03:	83 ec 0c             	sub    $0xc,%esp
+ 8048b06:	6a ff                	push   $0xffffffff
+ 8048b08:	e8 33 fa ff ff       	call   8048540 <exit@plt>
+	}
+	
+	return tv.tv_sec * 1000 + tv.tv_usec / 1000;//固定形式返回微秒
+ 8048b0d:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048b10:	69 d8 e8 03 00 00    	imul   $0x3e8,%eax,%ebx
+ 8048b16:	8b 4d f0             	mov    -0x10(%ebp),%ecx
+ 8048b19:	ba d3 4d 62 10       	mov    $0x10624dd3,%edx
+ 8048b1e:	89 c8                	mov    %ecx,%eax
+ 8048b20:	f7 ea                	imul   %edx
+ 8048b22:	c1 fa 06             	sar    $0x6,%edx
+ 8048b25:	89 c8                	mov    %ecx,%eax
+ 8048b27:	c1 f8 1f             	sar    $0x1f,%eax
+ 8048b2a:	29 c2                	sub    %eax,%edx
+ 8048b2c:	89 d0                	mov    %edx,%eax
+ 8048b2e:	01 d8                	add    %ebx,%eax
+}
+ 8048b30:	8b 5d f4             	mov    -0xc(%ebp),%ebx
+ 8048b33:	65 33 1d 14 00 00 00 	xor    %gs:0x14,%ebx
+ 8048b3a:	74 05                	je     8048b41 <getmstime+0x75>
+ 8048b3c:	e8 bf f9 ff ff       	call   8048500 <__stack_chk_fail@plt>
+ 8048b41:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8048b44:	c9                   	leave  
+ 8048b45:	c3                   	ret    
+
+08048b46 <pick>:
+static struct task_struct *pick() {
+ 8048b46:	55                   	push   %ebp
+ 8048b47:	89 e5                	mov    %esp,%ebp
+ 8048b49:	83 ec 18             	sub    $0x18,%esp
+	int i,next,c;
+	
+	//make sleep to running status
+	for(i = 0; i < NR_TASKS; ++i) {
+ 8048b4c:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+ 8048b53:	eb 4d                	jmp    8048ba2 <pick+0x5c>
+		if(task[i] && task[i]->status != THREAD_EXIT &&
+ 8048b55:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048b58:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048b5f:	85 c0                	test   %eax,%eax
+ 8048b61:	74 3b                	je     8048b9e <pick+0x58>
+ 8048b63:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048b66:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048b6d:	8b 40 10             	mov    0x10(%eax),%eax
+ 8048b70:	83 f8 03             	cmp    $0x3,%eax
+ 8048b73:	74 29                	je     8048b9e <pick+0x58>
+			getmstime() > task[i]->wakeuptime) {
+ 8048b75:	e8 52 ff ff ff       	call   8048acc <getmstime>
+ 8048b7a:	89 c2                	mov    %eax,%edx
+ 8048b7c:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048b7f:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048b86:	8b 40 0c             	mov    0xc(%eax),%eax
+static struct task_struct *pick() {
+	int i,next,c;
+	
+	//make sleep to running status
+	for(i = 0; i < NR_TASKS; ++i) {
+		if(task[i] && task[i]->status != THREAD_EXIT &&
+ 8048b89:	39 c2                	cmp    %eax,%edx
+ 8048b8b:	76 11                	jbe    8048b9e <pick+0x58>
+			getmstime() > task[i]->wakeuptime) {
+			task[i]->status = THREAD_RUNNING;
+ 8048b8d:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048b90:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048b97:	c7 40 10 01 00 00 00 	movl   $0x1,0x10(%eax)
+}
+static struct task_struct *pick() {
+	int i,next,c;
+	
+	//make sleep to running status
+	for(i = 0; i < NR_TASKS; ++i) {
+ 8048b9e:	83 45 ec 01          	addl   $0x1,-0x14(%ebp)
+ 8048ba2:	83 7d ec 0f          	cmpl   $0xf,-0x14(%ebp)
+ 8048ba6:	7e ad                	jle    8048b55 <pick+0xf>
+		}
+	}
+
+	//
+	while(1) {
+		c = -1;
+ 8048ba8:	c7 45 f4 ff ff ff ff 	movl   $0xffffffff,-0xc(%ebp)
+		next = 0;
+ 8048baf:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%ebp)
+
+		//find the running and the thread with  biggest counter
+		for(i = 0; i < NR_TASKS; ++i) {
+ 8048bb6:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+ 8048bbd:	eb 4f                	jmp    8048c0e <pick+0xc8>
+			if(!task[i]) continue;
+ 8048bbf:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048bc2:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048bc9:	85 c0                	test   %eax,%eax
+ 8048bcb:	74 3c                	je     8048c09 <pick+0xc3>
+			if(task[i]->status == THREAD_RUNNING && task[i]->counter > c) {
+ 8048bcd:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048bd0:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048bd7:	8b 40 10             	mov    0x10(%eax),%eax
+ 8048bda:	83 f8 01             	cmp    $0x1,%eax
+ 8048bdd:	75 2b                	jne    8048c0a <pick+0xc4>
+ 8048bdf:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048be2:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048be9:	8b 40 14             	mov    0x14(%eax),%eax
+ 8048bec:	3b 45 f4             	cmp    -0xc(%ebp),%eax
+ 8048bef:	7e 19                	jle    8048c0a <pick+0xc4>
+				c = task[i]->counter;
+ 8048bf1:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048bf4:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048bfb:	8b 40 14             	mov    0x14(%eax),%eax
+ 8048bfe:	89 45 f4             	mov    %eax,-0xc(%ebp)
+				next = i;
+ 8048c01:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048c04:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 8048c07:	eb 01                	jmp    8048c0a <pick+0xc4>
+		c = -1;
+		next = 0;
+
+		//find the running and the thread with  biggest counter
+		for(i = 0; i < NR_TASKS; ++i) {
+			if(!task[i]) continue;
+ 8048c09:	90                   	nop
+	while(1) {
+		c = -1;
+		next = 0;
+
+		//find the running and the thread with  biggest counter
+		for(i = 0; i < NR_TASKS; ++i) {
+ 8048c0a:	83 45 ec 01          	addl   $0x1,-0x14(%ebp)
+ 8048c0e:	83 7d ec 0f          	cmpl   $0xf,-0x14(%ebp)
+ 8048c12:	7e ab                	jle    8048bbf <pick+0x79>
+		/*
+		   c == 0 all the counter == 0
+		   c == -1 all status is sleep or counter == 0,now next is 0,so return to init_task
+		   c == default  found the next thread
+		*/
+		if(c) break;
+ 8048c14:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048c18:	75 57                	jne    8048c71 <pick+0x12b>
+		
+		//all the counter == 0
+		if(c == 0) {
+ 8048c1a:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048c1e:	75 88                	jne    8048ba8 <pick+0x62>
+			for(i = 0; i < NR_TASKS; ++i) {
+ 8048c20:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+ 8048c27:	eb 3d                	jmp    8048c66 <pick+0x120>
+				if(task[i]) {//make it bigger,or distribute timer
+ 8048c29:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048c2c:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048c33:	85 c0                	test   %eax,%eax
+ 8048c35:	74 2b                	je     8048c62 <pick+0x11c>
+
+					task[i]->counter = task[i]->priority + (task[i]->counter>>1);
+ 8048c37:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 8048c3a:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048c41:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 8048c44:	8b 14 95 a0 c0 04 08 	mov    0x804c0a0(,%edx,4),%edx
+ 8048c4b:	8b 4a 18             	mov    0x18(%edx),%ecx
+ 8048c4e:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 8048c51:	8b 14 95 a0 c0 04 08 	mov    0x804c0a0(,%edx,4),%edx
+ 8048c58:	8b 52 14             	mov    0x14(%edx),%edx
+ 8048c5b:	d1 fa                	sar    %edx
+ 8048c5d:	01 ca                	add    %ecx,%edx
+ 8048c5f:	89 50 14             	mov    %edx,0x14(%eax)
+		*/
+		if(c) break;
+		
+		//all the counter == 0
+		if(c == 0) {
+			for(i = 0; i < NR_TASKS; ++i) {
+ 8048c62:	83 45 ec 01          	addl   $0x1,-0x14(%ebp)
+ 8048c66:	83 7d ec 0f          	cmpl   $0xf,-0x14(%ebp)
+ 8048c6a:	7e bd                	jle    8048c29 <pick+0xe3>
+
+					task[i]->counter = task[i]->priority + (task[i]->counter>>1);
+				}
+			}
+		}
+	}
+ 8048c6c:	e9 37 ff ff ff       	jmp    8048ba8 <pick+0x62>
+		/*
+		   c == 0 all the counter == 0
+		   c == -1 all status is sleep or counter == 0,now next is 0,so return to init_task
+		   c == default  found the next thread
+		*/
+		if(c) break;
+ 8048c71:	90                   	nop
+					task[i]->counter = task[i]->priority + (task[i]->counter>>1);
+				}
+			}
+		}
+	}
+	return task[next];
+ 8048c72:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8048c75:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+}
+ 8048c7c:	c9                   	leave  
+ 8048c7d:	c3                   	ret    
+
+08048c7e <closealarm>:
+
+void closealarm() {
+ 8048c7e:	55                   	push   %ebp
+ 8048c7f:	89 e5                	mov    %esp,%ebp
+ 8048c81:	81 ec 98 00 00 00    	sub    $0x98,%esp
+ 8048c87:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 8048c8d:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048c90:	31 c0                	xor    %eax,%eax
+	sigset_t mask;
+	sigemptyset(&mask);
+ 8048c92:	83 ec 0c             	sub    $0xc,%esp
+ 8048c95:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048c9b:	50                   	push   %eax
+ 8048c9c:	e8 cf f8 ff ff       	call   8048570 <sigemptyset@plt>
+ 8048ca1:	83 c4 10             	add    $0x10,%esp
+	sigaddset(&mask,SIGALRM);
+ 8048ca4:	83 ec 08             	sub    $0x8,%esp
+ 8048ca7:	6a 0e                	push   $0xe
+ 8048ca9:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048caf:	50                   	push   %eax
+ 8048cb0:	e8 ab f8 ff ff       	call   8048560 <sigaddset@plt>
+ 8048cb5:	83 c4 10             	add    $0x10,%esp
+	if(sigprocmask(SIG_BLOCK,&mask,NULL) < 0) {
+ 8048cb8:	83 ec 04             	sub    $0x4,%esp
+ 8048cbb:	6a 00                	push   $0x0
+ 8048cbd:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048cc3:	50                   	push   %eax
+ 8048cc4:	6a 00                	push   $0x0
+ 8048cc6:	e8 f5 f7 ff ff       	call   80484c0 <sigprocmask@plt>
+ 8048ccb:	83 c4 10             	add    $0x10,%esp
+ 8048cce:	85 c0                	test   %eax,%eax
+ 8048cd0:	79 10                	jns    8048ce2 <closealarm+0x64>
+		perror("sigprocmask BLOCK");
+ 8048cd2:	83 ec 0c             	sub    $0xc,%esp
+ 8048cd5:	68 c1 8f 04 08       	push   $0x8048fc1
+ 8048cda:	e8 31 f8 ff ff       	call   8048510 <perror@plt>
+ 8048cdf:	83 c4 10             	add    $0x10,%esp
+	}
+}
+ 8048ce2:	90                   	nop
+ 8048ce3:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048ce6:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+ 8048ced:	74 05                	je     8048cf4 <closealarm+0x76>
+ 8048cef:	e8 0c f8 ff ff       	call   8048500 <__stack_chk_fail@plt>
+ 8048cf4:	c9                   	leave  
+ 8048cf5:	c3                   	ret    
+
+08048cf6 <openalarm>:
+
+void openalarm() {
+ 8048cf6:	55                   	push   %ebp
+ 8048cf7:	89 e5                	mov    %esp,%ebp
+ 8048cf9:	81 ec 98 00 00 00    	sub    $0x98,%esp
+ 8048cff:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 8048d05:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048d08:	31 c0                	xor    %eax,%eax
+	sigset_t mask;
+	sigemptyset(&mask);
+ 8048d0a:	83 ec 0c             	sub    $0xc,%esp
+ 8048d0d:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048d13:	50                   	push   %eax
+ 8048d14:	e8 57 f8 ff ff       	call   8048570 <sigemptyset@plt>
+ 8048d19:	83 c4 10             	add    $0x10,%esp
+	sigaddset(&mask,SIGALRM);
+ 8048d1c:	83 ec 08             	sub    $0x8,%esp
+ 8048d1f:	6a 0e                	push   $0xe
+ 8048d21:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048d27:	50                   	push   %eax
+ 8048d28:	e8 33 f8 ff ff       	call   8048560 <sigaddset@plt>
+ 8048d2d:	83 c4 10             	add    $0x10,%esp
+	if(sigprocmask(SIG_UNBLOCK,&mask,NULL) < 0) {
+ 8048d30:	83 ec 04             	sub    $0x4,%esp
+ 8048d33:	6a 00                	push   $0x0
+ 8048d35:	8d 85 74 ff ff ff    	lea    -0x8c(%ebp),%eax
+ 8048d3b:	50                   	push   %eax
+ 8048d3c:	6a 01                	push   $0x1
+ 8048d3e:	e8 7d f7 ff ff       	call   80484c0 <sigprocmask@plt>
+ 8048d43:	83 c4 10             	add    $0x10,%esp
+ 8048d46:	85 c0                	test   %eax,%eax
+ 8048d48:	79 10                	jns    8048d5a <openalarm+0x64>
+		perror("sigprocmask BLOCK");
+ 8048d4a:	83 ec 0c             	sub    $0xc,%esp
+ 8048d4d:	68 c1 8f 04 08       	push   $0x8048fc1
+ 8048d52:	e8 b9 f7 ff ff       	call   8048510 <perror@plt>
+ 8048d57:	83 c4 10             	add    $0x10,%esp
+	}
+	
+}
+ 8048d5a:	90                   	nop
+ 8048d5b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048d5e:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+ 8048d65:	74 05                	je     8048d6c <openalarm+0x76>
+ 8048d67:	e8 94 f7 ff ff       	call   8048500 <__stack_chk_fail@plt>
+ 8048d6c:	c9                   	leave  
+ 8048d6d:	c3                   	ret    
+
+08048d6e <schedule>:
+void schedule() {
+ 8048d6e:	55                   	push   %ebp
+ 8048d6f:	89 e5                	mov    %esp,%ebp
+ 8048d71:	83 ec 18             	sub    $0x18,%esp
+	struct task_struct *next = pick();
+ 8048d74:	e8 cd fd ff ff       	call   8048b46 <pick>
+ 8048d79:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if(next) {
+ 8048d7c:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048d80:	74 0e                	je     8048d90 <schedule+0x22>
+		switch_to(next);
+ 8048d82:	83 ec 0c             	sub    $0xc,%esp
+ 8048d85:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8048d88:	e8 eb 00 00 00       	call   8048e78 <switch_to>
+ 8048d8d:	83 c4 10             	add    $0x10,%esp
+	}
+}
+ 8048d90:	90                   	nop
+ 8048d91:	c9                   	leave  
+ 8048d92:	c3                   	ret    
+
+08048d93 <mysleep>:
+
+void mysleep(int seconds) {
+ 8048d93:	55                   	push   %ebp
+ 8048d94:	89 e5                	mov    %esp,%ebp
+ 8048d96:	53                   	push   %ebx
+ 8048d97:	83 ec 04             	sub    $0x4,%esp
+	current->wakeuptime = getmstime() + 1000 * seconds;//转化为微秒
+ 8048d9a:	8b 1d 9c c0 04 08    	mov    0x804c09c,%ebx
+ 8048da0:	e8 27 fd ff ff       	call   8048acc <getmstime>
+ 8048da5:	89 c2                	mov    %eax,%edx
+ 8048da7:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048daa:	69 c0 e8 03 00 00    	imul   $0x3e8,%eax,%eax
+ 8048db0:	01 d0                	add    %edx,%eax
+ 8048db2:	89 43 0c             	mov    %eax,0xc(%ebx)
+	current->status = THREAD_SLEEP;
+ 8048db5:	a1 9c c0 04 08       	mov    0x804c09c,%eax
+ 8048dba:	c7 40 10 02 00 00 00 	movl   $0x2,0x10(%eax)
+
+	schedule();
+ 8048dc1:	e8 a8 ff ff ff       	call   8048d6e <schedule>
+}
+ 8048dc6:	90                   	nop
+ 8048dc7:	83 c4 04             	add    $0x4,%esp
+ 8048dca:	5b                   	pop    %ebx
+ 8048dcb:	5d                   	pop    %ebp
+ 8048dcc:	c3                   	ret    
+
+08048dcd <do_timer>:
+
+static void do_timer() {
+ 8048dcd:	55                   	push   %ebp
+ 8048dce:	89 e5                	mov    %esp,%ebp
+ 8048dd0:	83 ec 08             	sub    $0x8,%esp
+	if(--current->counter > 0) return;
+ 8048dd3:	a1 9c c0 04 08       	mov    0x804c09c,%eax
+ 8048dd8:	8b 50 14             	mov    0x14(%eax),%edx
+ 8048ddb:	83 ea 01             	sub    $0x1,%edx
+ 8048dde:	89 50 14             	mov    %edx,0x14(%eax)
+ 8048de1:	8b 40 14             	mov    0x14(%eax),%eax
+ 8048de4:	85 c0                	test   %eax,%eax
+ 8048de6:	7f 13                	jg     8048dfb <do_timer+0x2e>
+	current->counter = 0;
+ 8048de8:	a1 9c c0 04 08       	mov    0x804c09c,%eax
+ 8048ded:	c7 40 14 00 00 00 00 	movl   $0x0,0x14(%eax)
+	schedule();
+ 8048df4:	e8 75 ff ff ff       	call   8048d6e <schedule>
+ 8048df9:	eb 01                	jmp    8048dfc <do_timer+0x2f>
+
+	schedule();
+}
+
+static void do_timer() {
+	if(--current->counter > 0) return;
+ 8048dfb:	90                   	nop
+	current->counter = 0;
+	schedule();
+}
+ 8048dfc:	c9                   	leave  
+ 8048dfd:	c3                   	ret    
+
+08048dfe <init>:
+__attribute__((constructor))
+static void init() {
+ 8048dfe:	55                   	push   %ebp
+ 8048dff:	89 e5                	mov    %esp,%ebp
+ 8048e01:	83 ec 28             	sub    $0x28,%esp
+ 8048e04:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 8048e0a:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048e0d:	31 c0                	xor    %eax,%eax
+	struct itimerval value;
+	value.it_value.tv_sec = 0;
+ 8048e0f:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+	value.it_value.tv_usec = 1000;
+ 8048e16:	c7 45 f0 e8 03 00 00 	movl   $0x3e8,-0x10(%ebp)
+	value.it_interval.tv_sec = 0;
+ 8048e1d:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+	value.it_interval.tv_usec = 1000 * 10;
+ 8048e24:	c7 45 e8 10 27 00 00 	movl   $0x2710,-0x18(%ebp)
+	if(setitimer(ITIMER_REAL,&value,NULL) < 0) {
+ 8048e2b:	83 ec 04             	sub    $0x4,%esp
+ 8048e2e:	6a 00                	push   $0x0
+ 8048e30:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+ 8048e33:	50                   	push   %eax
+ 8048e34:	6a 00                	push   $0x0
+ 8048e36:	e8 65 f6 ff ff       	call   80484a0 <setitimer@plt>
+ 8048e3b:	83 c4 10             	add    $0x10,%esp
+ 8048e3e:	85 c0                	test   %eax,%eax
+ 8048e40:	79 10                	jns    8048e52 <init+0x54>
+		perror("setitimer");
+ 8048e42:	83 ec 0c             	sub    $0xc,%esp
+ 8048e45:	68 d3 8f 04 08       	push   $0x8048fd3
+ 8048e4a:	e8 c1 f6 ff ff       	call   8048510 <perror@plt>
+ 8048e4f:	83 c4 10             	add    $0x10,%esp
+	}
+	signal(SIGALRM,do_timer);
+ 8048e52:	83 ec 08             	sub    $0x8,%esp
+ 8048e55:	68 cd 8d 04 08       	push   $0x8048dcd
+ 8048e5a:	6a 0e                	push   $0xe
+ 8048e5c:	e8 7f f6 ff ff       	call   80484e0 <signal@plt>
+ 8048e61:	83 c4 10             	add    $0x10,%esp
+}
+ 8048e64:	90                   	nop
+ 8048e65:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048e68:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+ 8048e6f:	74 05                	je     8048e76 <init+0x78>
+ 8048e71:	e8 8a f6 ff ff       	call   8048500 <__stack_chk_fail@plt>
+ 8048e76:	c9                   	leave  
+ 8048e77:	c3                   	ret    
+
+08048e78 <switch_to>:
+/*void switch_to(struct task_struct* next)*/
+
+.section .text
+.global switch_to
+switch_to:
+	call closealarm
+ 8048e78:	e8 01 fe ff ff       	call   8048c7e <closealarm>
+	push %ebp
+ 8048e7d:	55                   	push   %ebp
+	mov %esp,%ebp /* in order to find flag */
+ 8048e7e:	89 e5                	mov    %esp,%ebp
+
+	/*store the status*/
+	push %edi
+ 8048e80:	57                   	push   %edi
+	push %esi
+ 8048e81:	56                   	push   %esi
+	push %ebx
+ 8048e82:	53                   	push   %ebx
+	push %edx
+ 8048e83:	52                   	push   %edx
+	push %ecx
+ 8048e84:	51                   	push   %ecx
+	push %eax
+ 8048e85:	50                   	push   %eax
+	pushfl
+ 8048e86:	9c                   	pushf  
+
+	/*prepare to change stack*/
+	mov current,%eax /*store the esp*/
+ 8048e87:	a1 9c c0 04 08       	mov    0x804c09c,%eax
+	mov %esp,8(%eax)
+ 8048e8c:	89 60 08             	mov    %esp,0x8(%eax)
+	mov 8(%ebp),%eax /*get the next thread id*/
+ 8048e8f:	8b 45 08             	mov    0x8(%ebp),%eax
+	mov %eax,current /*set current the next thread*/
+ 8048e92:	a3 9c c0 04 08       	mov    %eax,0x804c09c
+	mov 8(%eax),%esp /*switch_to the stack of next thread*/
+ 8048e97:	8b 60 08             	mov    0x8(%eax),%esp
+
+	popfl
+ 8048e9a:	9d                   	popf   
+	popl %eax
+ 8048e9b:	58                   	pop    %eax
+	popl %edx
+ 8048e9c:	5a                   	pop    %edx
+	popl %ecx
+ 8048e9d:	59                   	pop    %ecx
+	popl %ebx
+ 8048e9e:	5b                   	pop    %ebx
+	popl %esi
+ 8048e9f:	5e                   	pop    %esi
+	popl %edi
+ 8048ea0:	5f                   	pop    %edi
+
+	popl %ebp
+ 8048ea1:	5d                   	pop    %ebp
+	call openalarm
+ 8048ea2:	e8 4f fe ff ff       	call   8048cf6 <openalarm>
+	ret
+ 8048ea7:	c3                   	ret    
+ 8048ea8:	66 90                	xchg   %ax,%ax
+ 8048eaa:	66 90                	xchg   %ax,%ax
+ 8048eac:	66 90                	xchg   %ax,%ax
+ 8048eae:	66 90                	xchg   %ax,%ax
+
+08048eb0 <__libc_csu_init>:
+ 8048eb0:	55                   	push   %ebp
+ 8048eb1:	57                   	push   %edi
+ 8048eb2:	56                   	push   %esi
+ 8048eb3:	53                   	push   %ebx
+ 8048eb4:	e8 07 f7 ff ff       	call   80485c0 <__x86.get_pc_thunk.bx>
+ 8048eb9:	81 c3 47 21 00 00    	add    $0x2147,%ebx
+ 8048ebf:	83 ec 0c             	sub    $0xc,%esp
+ 8048ec2:	8b 6c 24 20          	mov    0x20(%esp),%ebp
+ 8048ec6:	8d b3 0c ff ff ff    	lea    -0xf4(%ebx),%esi
+ 8048ecc:	e8 9b f5 ff ff       	call   804846c <_init>
+ 8048ed1:	8d 83 04 ff ff ff    	lea    -0xfc(%ebx),%eax
+ 8048ed7:	29 c6                	sub    %eax,%esi
+ 8048ed9:	c1 fe 02             	sar    $0x2,%esi
+ 8048edc:	85 f6                	test   %esi,%esi
+ 8048ede:	74 25                	je     8048f05 <__libc_csu_init+0x55>
+ 8048ee0:	31 ff                	xor    %edi,%edi
+ 8048ee2:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+ 8048ee8:	83 ec 04             	sub    $0x4,%esp
+ 8048eeb:	ff 74 24 2c          	pushl  0x2c(%esp)
+ 8048eef:	ff 74 24 2c          	pushl  0x2c(%esp)
+ 8048ef3:	55                   	push   %ebp
+ 8048ef4:	ff 94 bb 04 ff ff ff 	call   *-0xfc(%ebx,%edi,4)
+ 8048efb:	83 c7 01             	add    $0x1,%edi
+ 8048efe:	83 c4 10             	add    $0x10,%esp
+ 8048f01:	39 f7                	cmp    %esi,%edi
+ 8048f03:	75 e3                	jne    8048ee8 <__libc_csu_init+0x38>
+ 8048f05:	83 c4 0c             	add    $0xc,%esp
+ 8048f08:	5b                   	pop    %ebx
+ 8048f09:	5e                   	pop    %esi
+ 8048f0a:	5f                   	pop    %edi
+ 8048f0b:	5d                   	pop    %ebp
+ 8048f0c:	c3                   	ret    
+ 8048f0d:	8d 76 00             	lea    0x0(%esi),%esi
+
+08048f10 <__libc_csu_fini>:
+ 8048f10:	f3 c3                	repz ret 
+
+Disassembly of section .fini:
+
+08048f14 <_fini>:
+ 8048f14:	53                   	push   %ebx
+ 8048f15:	83 ec 08             	sub    $0x8,%esp
+ 8048f18:	e8 a3 f6 ff ff       	call   80485c0 <__x86.get_pc_thunk.bx>
+ 8048f1d:	81 c3 e3 20 00 00    	add    $0x20e3,%ebx
+ 8048f23:	83 c4 08             	add    $0x8,%esp
+ 8048f26:	5b                   	pop    %ebx
+ 8048f27:	c3                   	ret    

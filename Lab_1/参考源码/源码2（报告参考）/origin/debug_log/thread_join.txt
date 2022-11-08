@@ -1,0 +1,23 @@
+08048a86 <thread_join>:
+ 8048a86:	55                   	push   %ebp
+ 8048a87:	89 e5                	mov    %esp,%ebp
+ 8048a89:	83 ec 08             	sub    $0x8,%esp
+ 8048a8c:	eb 05                	jmp    8048a93 <thread_join+0xd>
+ 8048a8e:	e8 db 02 00 00       	call   8048d6e <schedule>
+ 8048a93:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048a96:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048a9d:	8b 40 10             	mov    0x10(%eax),%eax
+ 8048aa0:	83 f8 03             	cmp    $0x3,%eax
+ 8048aa3:	75 e9                	jne    8048a8e <thread_join+0x8>
+ 8048aa5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048aa8:	8b 04 85 a0 c0 04 08 	mov    0x804c0a0(,%eax,4),%eax
+ 8048aaf:	83 ec 0c             	sub    $0xc,%esp
+ 8048ab2:	50                   	push   %eax
+ 8048ab3:	e8 18 fa ff ff       	call   80484d0 <free@plt>
+ 8048ab8:	83 c4 10             	add    $0x10,%esp
+ 8048abb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048abe:	c7 04 85 a0 c0 04 08 	movl   $0x0,0x804c0a0(,%eax,4)
+ 8048ac5:	00 00 00 00 
+ 8048ac9:	90                   	nop
+ 8048aca:	c9                   	leave  
+ 8048acb:	c3                   	ret    

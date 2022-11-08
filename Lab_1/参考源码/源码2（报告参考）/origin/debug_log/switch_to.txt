@@ -1,0 +1,30 @@
+08048e78 <switch_to>:
+ 8048e78:	e8 01 fe ff ff       	call   8048c7e <closealarm>
+ 8048e7d:	55                   	push   %ebp
+ 8048e7e:	89 e5                	mov    %esp,%ebp
+ 8048e80:	57                   	push   %edi
+ 8048e81:	56                   	push   %esi
+ 8048e82:	53                   	push   %ebx
+ 8048e83:	52                   	push   %edx
+ 8048e84:	51                   	push   %ecx
+ 8048e85:	50                   	push   %eax
+ 8048e86:	9c                   	pushf  
+ 8048e87:	a1 9c c0 04 08       	mov    0x804c09c,%eax
+ 8048e8c:	89 60 08             	mov    %esp,0x8(%eax)
+ 8048e8f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e92:	a3 9c c0 04 08       	mov    %eax,0x804c09c
+ 8048e97:	8b 60 08             	mov    0x8(%eax),%esp
+ 8048e9a:	9d                   	popf   
+ 8048e9b:	58                   	pop    %eax
+ 8048e9c:	5a                   	pop    %edx
+ 8048e9d:	59                   	pop    %ecx
+ 8048e9e:	5b                   	pop    %ebx
+ 8048e9f:	5e                   	pop    %esi
+ 8048ea0:	5f                   	pop    %edi
+ 8048ea1:	5d                   	pop    %ebp
+ 8048ea2:	e8 4f fe ff ff       	call   8048cf6 <openalarm>
+ 8048ea7:	c3                   	ret    
+ 8048ea8:	66 90                	xchg   %ax,%ax
+ 8048eaa:	66 90                	xchg   %ax,%ax
+ 8048eac:	66 90                	xchg   %ax,%ax
+ 8048eae:	66 90                	xchg   %ax,%ax

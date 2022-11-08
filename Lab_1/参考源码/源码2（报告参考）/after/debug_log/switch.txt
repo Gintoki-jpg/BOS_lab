@@ -1,0 +1,24 @@
+08048672 <switch_to>:
+ 8048672:	55                   	push   %ebp
+ 8048673:	89 e5                	mov    %esp,%ebp
+ 8048675:	57                   	push   %edi
+ 8048676:	56                   	push   %esi
+ 8048677:	53                   	push   %ebx
+ 8048678:	52                   	push   %edx
+ 8048679:	51                   	push   %ecx
+ 804867a:	50                   	push   %eax
+ 804867b:	9c                   	pushf  
+ 804867c:	a1 34 a0 04 08       	mov    0x804a034,%eax
+ 8048681:	89 24 85 28 a0 04 08 	mov    %esp,0x804a028(,%eax,4)
+ 8048688:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804868b:	a3 34 a0 04 08       	mov    %eax,0x804a034
+ 8048690:	8b 24 85 28 a0 04 08 	mov    0x804a028(,%eax,4),%esp
+ 8048697:	9d                   	popf   
+ 8048698:	58                   	pop    %eax
+ 8048699:	5a                   	pop    %edx
+ 804869a:	59                   	pop    %ecx
+ 804869b:	5b                   	pop    %ebx
+ 804869c:	5e                   	pop    %esi
+ 804869d:	5f                   	pop    %edi
+ 804869e:	5d                   	pop    %ebp
+ 804869f:	c3                   	ret    

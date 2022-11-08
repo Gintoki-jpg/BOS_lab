@@ -1,0 +1,2 @@
+objdump -D main > log/main.txt
+xx,xx W! >> xxxx.txt

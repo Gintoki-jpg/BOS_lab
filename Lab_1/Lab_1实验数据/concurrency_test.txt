@@ -1,0 +1,97 @@
+thread_1's origin stack[11] is 0
+thread_1's origin stack[10] is 0
+thread_1's origin stack[9] is 0
+thread_1's origin stack[8] is 0
+thread_1's origin stack[7] is 0
+thread_1's origin stack[6] is 0
+thread_1's origin stack[5] is 0
+thread_1's origin stack[4] is 0
+thread_1's origin stack[3] is 134515133
+thread_1's origin stack[2] is 100
+thread_1's origin stack[1] is 138399752
+<=======================>
+Thread_ 1 has been created
+thread_2's origin stack[11] is 0
+thread_2's origin stack[10] is 0
+thread_2's origin stack[9] is 0
+thread_2's origin stack[8] is 0
+thread_2's origin stack[7] is 0
+thread_2's origin stack[6] is 0
+thread_2's origin stack[5] is 0
+thread_2's origin stack[4] is 0
+thread_2's origin stack[3] is 134515133
+thread_2's origin stack[2] is 100
+thread_2's origin stack[1] is 138404912
+<=======================>
+Thread_ 2 has been created
+thread_3's origin stack[11] is 0
+thread_3's origin stack[10] is 0
+thread_3's origin stack[9] is 0
+thread_3's origin stack[8] is 0
+thread_3's origin stack[7] is 0
+thread_3's origin stack[6] is 0
+thread_3's origin stack[5] is 0
+thread_3's origin stack[4] is 0
+thread_3's origin stack[3] is 134515133
+thread_3's origin stack[2] is 100
+thread_3's origin stack[1] is 138409040
+<=======================>
+Thread_ 3 has been created
+thread_4's origin stack[11] is 0
+thread_4's origin stack[10] is 0
+thread_4's origin stack[9] is 0
+thread_4's origin stack[8] is 0
+thread_4's origin stack[7] is 0
+thread_4's origin stack[6] is 0
+thread_4's origin stack[5] is 0
+thread_4's origin stack[4] is 0
+thread_4's origin stack[3] is 134515133
+thread_4's origin stack[2] is 100
+thread_4's origin stack[1] is 138413168
+<=======================>
+Thread_ 4 has been created
+<====================================>
+Main thread is running
+thread_1 is running----Time clock = 0.00
+thread_2 is running----Time clock = 0.00
+thread_3 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+thread_4 is running----Time clock = 0.00
+Thread_4 excited
+Main thread is running
+thread_2 is running----Time clock = 0.95
+thread_1 is running----Time clock = 1.88
+thread_2 is running----Time clock = 1.89
+thread_2 is running----Time clock = 2.85
+thread_1 is running----Time clock = 3.68
+thread_2 is running----Time clock = 3.68
+thread_3 is running----Time clock = 4.61
+thread_2 is running----Time clock = 4.61
+thread_1 is running----Time clock = 5.44
+thread_2 is running----Time clock = 5.44
+thread_2 is running----Time clock = 6.34
+thread_1 is running----Time clock = 7.30
+thread_2 is running----Time clock = 7.30
+thread_2 is running----Time clock = 8.11
+Thread_3 excited
+thread_1 is running----Time clock = 9.09
+Thread_2 excited
+thread_1 is running----Time clock = 11.00
+thread_1 is running----Time clock = 12.94
+thread_1 is running----Time clock = 14.90
+thread_1 is running----Time clock = 16.87
+Thread_1 excited
+Main thread is running
