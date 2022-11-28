@@ -1,0 +1,1 @@
+In this version,we can successfully use timer instead of easy create_timer function,and we combain timer with RR,FIFO is so easy so we skip,then we are supposed to realize ticket algorithm
